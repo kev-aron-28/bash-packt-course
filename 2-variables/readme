@@ -1,0 +1,29 @@
+# Variables
+Play an importante role in any programming lenguage
+
+Used to store data or values
+
+Can be number, char, string, path, command output
+
+
+# Types
+- User defined Variables
+- System defined variables
+- Special variables
+
+[a-zA-Z][0-9]
+Less or equal to 20 chars
+Case sensitive
+Dont provide space
+z=s
+ 
+
+We can assign de output of a command with
+- var=$(command)
+- var-`command`
+
+
+To assign the value of another variable
+var=1
+var2=$var
+var2=${var}

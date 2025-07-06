@@ -1,0 +1,33 @@
+There are different ways to provide inputs for variables in Bash
+- Directly definin a variable in the script 
+- Using the read command
+- Using a source concept
+- Using the export command 
+- using the command line arguments
+- Using options with the help of a while loop
+
+There are different ways of displaying data 
+- echo
+- cat command with here-doc
+- printf
+
+
+# Echo
+
+echo [-neE][Arguments]
+Options
+  - -n: do not appedn a newline or a trainling newline is suppressed
+  - -e: enable interpretation of the following backslash escapes
+  - -E: explicity suppress interpretation of backslash escapes (default)
+
+
+# Read command
+- read [options] [variables]
+options:
+  - -p: Outpus the prompt string before reading a user input
+  - -r: Disable the execution of escaped characters
+  - -s: Does not echo the user input on terminal while passing to a script
+
+If not provide any variable in read, then it will be stored in REPLY by default
+
+By default it will split by space, to change it you have to use IFS
