@@ -31,3 +31,16 @@ options:
 If not provide any variable in read, then it will be stored in REPLY by default
 
 By default it will split by space, to change it you have to use IFS
+
+# Source command
+
+We define the inputs into a file, then we use them in scripts using source command
+- source FILEname
+
+A source command reads and executes the file content in the current shell
+
+# Export command 
+export command exports the variables from a shell, making them global and available in each sub-shell
+
+# Command line arguments
+Can be accessed with $1, $2, $3
