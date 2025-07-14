@@ -1,0 +1,38 @@
+Also a variable wit multiple variables into one
+
+Also called indexed arrays or lists
+
+- Creating an empty array
+  -  declare -a myArray
+  - myArray=()
+
+- Store values
+  values=(1 2 3 4 5 6)
+
+Must be separedted by space
+
+To acces is like any other programming language
+
+To get all values
+
+echo "${values[@]}"
+
+Slice array
+
+echo "${array[@]:1:2}"
+
+
+Get the index of element
+echo "${!array[@]}"
+
+
+Operation on arrays
+- Len ${#array[@]}
+- Overrating values like any other programming language
+- appending values array+=(1)
+- Delete a value unset array[1]
+
+# Provide inputs for arrays
+- Direct style
+- With command line arguments
+- Store console ouput
