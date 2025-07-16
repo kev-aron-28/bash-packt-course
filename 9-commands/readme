@@ -1,0 +1,70 @@
+# Exit status
+
+each linux command returns a status (integer 0-255) when its executed
+we can capture this return status using $?
+
+With zero it means it was executed succesfully
+
+
+To store it 
+status=$?
+status=${?}
+
+
+# Redirection operators
+
+## Input redirection operators
+
+<, <<<
+< For Files
+<<< For strings/text
+
+
+## Output redirection operators
+
+> To create a file
+>> To append a data to a file
+
+## Combining operators
+
+| By default it considers only a succesful output from the first command and passed an input to
+the second command
+
+# FIle Descriptors
+An integer number to identify STDIN, STDOUT, STDERR
+0: STDIN
+1: STDOUT
+2: STDERR
+
+ls -lrt /nonaccesible 1>succes.file 2>error.file
+
+Save to the same file
+
+ls -lrt /nonaccesible 1>succes.file 2>&1
+
+# Null file
+ls -lrt /nonaccesible 1>succes.file 2>/dev/null
+
+
+# Store command to execute
+myls=ls
+${myls}
+
+
+# Cut command
+Command is useful to select specific column/fields from a given file/text/string based on delimiter
+- Default delimiter is a tab and we can change it by using -d option
+-  -d value is always a single char
+
+
+echo "Kevin,Tapia,Cruz" | cut -d ',' -f1,2,3
+echo "Kevin,Tapia,Cruz" | cut -d ',' -f1,2,3 --output-delimiter ','
+echo "Kevin,Tapia,Cruz" | cut -d ',' -f1-3 --output-delimiter ','
+
+You can cut chars to 
+
+echo "hi,how,are,yo" | cut -c1
+
+
+# The awk command
+Same as cut command 
