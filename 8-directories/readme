@@ -1,0 +1,13 @@
+Are the same as bash array variables but these are useful to store
+values based on custom keys instead of index values
+
+Also called Hash tables
+
+declare -A myDict
+
+myDict=([name]=docker[version]=1.2)
+
+or 
+
+myDict[name]=docker
+myDict[version]=version
