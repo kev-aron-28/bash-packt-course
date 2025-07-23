@@ -68,3 +68,139 @@ echo "hi,how,are,yo" | cut -c1
 
 # The awk command
 Same as cut command 
+
+
+# Grep command
+grep [options] "String" files
+
+if no match is found then exists a status of a grep non-zero
+
+options
+- 
+-i: To ignore case for matching/searching
+-w: To match a whole word
+-v: To display the lines which are not having given string or tex
+-c: Print matched number of lines 
+-r:  
+-l: display only file names 
+-h: Hide files names 
+-o: only 
+-A -B -C
+
+
+# Sed command
+Stream editor, edits a stream of data
+
+sed [options] 'commands' fileName
+
+sed '' filename => Display file content
+sed -n '' filename => Stop default display
+sed -n '2p' filename => Print 2nd line
+sed -n '5,7p' filename => Print 5 and 7 lines
+sed -n '4,$p' filename => Print 4 to the end
+sed -n '$p' filename -> Print last line
+sed -n '1,+3p' filename -> print 1 and 3 lines after that 
+sed -n '1~3p' filename -> print 1 and every 3rd line after that
+
+Find and replace
+
+sed 's/search/replace/g' filename -> prints to stdout
+sed -i 's/search/replage/g' filename -> edits original
+sed -i.bak 's/search/replace/g' filename -> backup and edit
+
+insertion and deletion
+
+sed '1iNewLineInfo' filename -> defaults to stdout: Before first line
+sed -i '1iNewlineInfo' fileName -> Insert new line in file
+sed -i.bak '1iNewLineInfo' filename -> Take a backup and edit
+sed -i '1a NewLineInfo' filename -> inserts data after first line
+sed -I '$a NewLineInfo' filename -> inserts data after last line
+sed -I '$a NewLineInfo' filename -> inserts data after last line
+sed -I '/SearchString/iNewLineInfo' fileName
+
+# TR comands
+Is useful to translate or delete the chars the writes the output on stdout
+
+Command out | tr [options] [set] [set]
+
+tr [a-z] [A-Z] Lowercase to upper case
+tr [A-Z][a-z] Upper case to Lowercase
+
+tr '{}' '()'
+tr '' '\n'
+tr -d 'set' deletes the given set cat /etc/passwd | tr -d '[:digit:]'
+tr -s squeeze-repets
+
+ps -ef | grep dimedical | tr -s ' ' | cut -d ' ' -f2  search processes with name
+
+# Arimetic operations
+We can use (()) for integer numbers
+and bc for floating point numbers
+
+
+# Command chaining operators
+
+
+Are useful to combine multiple commands, so we can write simple and short shell scripts
+
+|
+;
+&&
+||
+&&||
+
+Pipe: Useful to pass the output of one command as input to the next command
+comamnd | command | command ...
+Only succesful output from the first command will be passed as input to the next command
+If want to pass an error,
+command 2>&1 | command
+
+Semicolon: Write and execute multiple commands in one line
+command;command;command
+ALl execute independently but in sequence
+
+Logical AND and OR && ||
+
+AND: Executes the second command only if the first command executes successfully
+
+command && comand && ...
+
+OR: Exececutes the second commands only if the first command fails
+command|| command||
+
+commbined work like if else statement
+which nginx && echo "INSTALLED" || echo "NOT INSTALLED "
+
+How to find any commmand
+
+which command
+command -v command
+
+
+# SCRIPT
+
+
+# IF ELSE
+
+simple
+command1 && command2
+
+if command1
+then 
+  command 2
+
+if cmd1; then
+  command2
+fi
+
+if !cmd1; then
+  command2
+fi
+
+
+if cmd1 
+then
+  cmd2
+else
+  cmd3
+fi
