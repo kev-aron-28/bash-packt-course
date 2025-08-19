@@ -7,7 +7,7 @@ select opt in add sub mul div
 do
   case $opt in
     add)
-      read -rp "Num1: " num1
+      read -rp "Num1: " num1 
       read -rp "Num2: " num2
       result=$((num1+num2))
       echo "The result is ${result}"
