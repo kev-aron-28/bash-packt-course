@@ -21,5 +21,24 @@ dir=$1
 ext=$2
 
 if [[ -z dir || -z ext ]] ; then
-
+  echo "Must provide args"
+  exit 1
 fi
+
+mkdir -p old_logs
+
+
+mapfile -t files < <(find "$dir" -type f -name "*.$ext" -mmin +10)
+
+if [[ ${#files[@]} -eq 0 ]] ; then
+  echo "No files found"  
+
+  exit 0
+fi
+
+
+for f in "${files[@]}"; do
+  echo "File found ${f}"
+done
+
+echo "Total files ${#files[@]}"
