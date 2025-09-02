@@ -9,3 +9,6 @@ if [[ -z file || -z word ]] ; then
 fi
 
 
+echo "Searchig for ${word} in ${file}"
+
+grep -n -o "$word" "$file"
