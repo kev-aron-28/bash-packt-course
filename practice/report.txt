@@ -1,0 +1,12 @@
+FIles by extension: 
+sh: 6
+txt: 12
+FIles by extension: 
+sh: 6
+txt: 12
+Largest file: 890
+FIles by extension: 
+sh: 6
+txt: 12
+Largest file: 890
+Smallest file: 6
