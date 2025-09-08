@@ -11,7 +11,6 @@ There are different ways of displaying data
 - cat command with here-doc
 - printf
 
-
 # Echo
 
 echo [-neE][Arguments]
@@ -44,3 +43,8 @@ export command exports the variables from a shell, making them global and availa
 
 # Command line arguments
 Can be accessed with $1, $2, $3
+
+
+# Shift command
+
+shift N, where is positive
