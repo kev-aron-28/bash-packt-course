@@ -2,10 +2,9 @@
 
 file=$1
 
-if [[ ! -f $file ]] ; then
-    echo "No es un archivo"
+if [[ ! -f "$file" ]]; then
+    echo "No es un archivo o no existe"
+    exit 1
 fi
 
-result=$(cat $file | sort -n)
-
-echo "$result"
+sort -n "$file"
