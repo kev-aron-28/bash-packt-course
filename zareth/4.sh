@@ -1,11 +1,18 @@
 #!/usr/bin/bash
 
-args=($@)
+count=0
 
-if [[ ${#args[@]} -eq 0 ]]; then
+while true; do
+    eval arg=\$$((count+1))
+    if [ -z "$arg" ]; then
+        break
+    fi
+    ((count++))
+done
+
+if [ $count -eq 0 ]; then
     echo "Args necesarios"
     exit 0
 fi
 
-echo "Total de argumentos ${#args[@]}"
-
+echo "Total de argumentos: $count"
