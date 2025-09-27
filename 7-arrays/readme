@@ -36,3 +36,118 @@ Operation on arrays
 - Direct style
 - With command line arguments
 - Store console ouput
+
+1. Substring Replacement
+## Replace first match
+${var/pattern/replacement}
+text="red apple red cherry"
+echo "${text/red/green}"
+# → green apple red cherry
+
+## Replace all matches
+${var//pattern/replacement}
+echo "${text//red/green}"
+# → green apple green cherry
+
+## Delete match
+${var/pattern/}
+echo "${text/red/}
+# →  apple red cherry   (first "red" removed)
+
+
+2. Prefix Removal
+## Shortest prefix match
+${var#pattern}
+file="report.txt"
+echo "${file#*.}"
+# → txt   (removes shortest prefix ending with ".")
+
+
+## Longest prefix match
+${var##pattern}
+path="/home/user/docs/file.txt"
+echo "${path##*/}"
+# → file.txt   (removes everything up to last "/")
+
+3. Suffix Removal
+## Shortest suffix match
+${var%pattern}
+file="report.txt"
+echo "${file%.*}"
+# → report
+
+## Longest suffix match
+
+${var%%pattern}
+path="archive.tar.gz"
+echo "${path%%.*}"
+# → archive   (removes longest suffix starting at first ".")
+
+
+
+# Basic globbing rules
+
+* ANy string 
+? Exactly one character
+[abc] any character in the set
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
