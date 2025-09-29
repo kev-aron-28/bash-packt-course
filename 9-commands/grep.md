@@ -54,3 +54,83 @@ grep -r "main" ./project
 
 4. -n → Show line numbers
 echo -e "first line\nsecond line\nthird line" | grep -n "second"
+
+
+# Grep and regular expressions
+
+From the previous example, we now 
+exclusively want to display lines starting with the string "root":
+
+cathy ~> grep ^root /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+
+If we want to see which accounts have no shell assigned 
+whatsoever, we search for lines ending in ":":
+
+
+cathy ~> grep :$ /etc/passwd
+news:x:9:13:news:/var/spool/news:
+
+grep '\<PATH'
+
+Matches de start of a string
+
+
+grep '\>PATH'
+
+Matches de end of a string
+
+
+-w find a string that is a separate word enclosed by spaces
+
+
+Regex Cheat Sheet for grep
+
+1. Character basics
+
+[0-9] → any digit.
+[A-Za-z] → any letter.
+. → any single character (except newline).
+\s (in -P) → whitespace (space, tab).
+\d (in -P) → digit, same as [0-9].
+
+2. Repetition quantifiers
+
+* → 0 or more times.
++ → 1 or more times.
+? → 0 or 1 time (optional).
+{n} → exactly n times.
+{m,n} → between m and n times
+
+3. Anchors
+
+^ → start of line.
+$ → end of line.
+\b → word boundary (only in -P).
+
+4. Alternation (OR)
+
+(cat|dog|mouse)
+
+5. Groups and backreferences
+
+( … ) → capture group.
+\1, \2, … → backreference to the nth captured group.
+
+6. Cross-space matching (like credit card digits)
+
+([0-9]) \1
+
+7. Lookarounds (only with grep -P)
+
+(?=…) → positive lookahead (must be followed by).
+(?!…) → negative lookahead (must NOT be followed by).
+(?<=…) → positive lookbehind (must be preceded by).
+(?<!…) → negative lookbehind (must NOT be preceded by).
+
+
+
+
+
+
+
