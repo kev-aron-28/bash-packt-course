@@ -21,7 +21,6 @@ Exit Status & Scripting Behavior
 
 2 → Error occurred (e.g., file not found, invalid syntax)
 
-
 1. Search for the word hello in a file:
 
 grep "hello" myfile.txt
@@ -127,6 +126,9 @@ $ → end of line.
 (?!…) → negative lookahead (must NOT be followed by).
 (?<=…) → positive lookbehind (must be preceded by).
 (?<!…) → negative lookbehind (must NOT be preceded by).
+
+
+
 
 
 
