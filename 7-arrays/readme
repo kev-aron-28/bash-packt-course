@@ -92,6 +92,62 @@ echo "${path%%.*}"
 [abc] any character in the set
 
 
+# Slicing
+
+${array[@]:start:length}
+
+start → starting index (0-based).
+length → number of elements to take.
+Bash arrays are zero-indexed:
+arr=(a b c d e f g)
+# indexes: 0 1 2 3 4 5 6
+
+
+## Basic slice
+echo "${arr[@]:2:3}"
+Starts at index 2 (c), takes 3 elements.
+
+## slice to the end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

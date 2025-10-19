@@ -78,12 +78,10 @@ sort file.txt | uniq
 8. Check if file is sorted
 sort -c file.txt
 
-
 ➡️ Reports the first line that is out of order.
 
 9. Random sort
 sort -R file.txt
-
 
 ➡️ Shuffles lines randomly.
 (If not available, use shuf.)
@@ -141,3 +139,6 @@ sort file.txt -o sorted.txt
 -s → stable sort
 
 -o file → write output to file
+
+
+
