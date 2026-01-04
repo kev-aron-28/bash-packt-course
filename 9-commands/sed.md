@@ -54,5 +54,19 @@ sed 's/abc/(abc)/' <old >new
 123 123 abc
 
 
+| Flag / Modifier | Type   | Description                           | Example                            |              |
+| --------------- | ------ | ------------------------------------- | ---------------------------------- | ------------ |
+| `-e`            | option | Execute sed command (can be repeated) | `sed -e 's/a/b/' -e 's/c/d/' file` |              |
+| `-f`            | option | Read sed commands from file           | `sed -f script.sed file`           |              |
+| `-i`            | option | Edit file in place                    | `sed -i 's/foo/bar/' file`         |              |
+| `-i.bak`        | option | In-place edit with backup             | `sed -i.bak 's/foo/bar/' file`     |              |
+| `-n`            | option | Suppress automatic printing           | `sed -n '/err/p' file`             |              |
+| `-E`            | option | Extended regex (BSD/macOS)            | `sed -E 's/(a                      | b)/c/' file` |
+| `-r`            | option | Extended regex (GNU)                  | `sed -r 's/(a                      | b)/c/' file` |
+| `--posix`       | option | Force POSIX behavior                  | `sed --posix 's/a/b/' file`        |              |
+| `--debug`       | option | Debug execution (GNU)                 | `sed --debug 's/a/b/' file`        |              |
+
+
+
 
 

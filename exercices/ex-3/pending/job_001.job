@@ -1,0 +1,2 @@
+COMMAND=echo "Job 001: success"
+RETRIES=3
