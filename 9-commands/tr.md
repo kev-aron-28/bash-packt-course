@@ -1,4 +1,4 @@
-🔹 Syntax
+Syntax
 tr [OPTION] SET1 [SET2]
 
 
@@ -8,7 +8,7 @@ SET2 → replacement characters (only when doing translation)
 
 By default, it reads from stdin and writes to stdout.
 
-🔹 Common Uses of tr
+Common Uses of tr
 1. Convert case
 
 Lowercase → Uppercase:
@@ -55,7 +55,7 @@ Turn multi-line into single-line:
 
 cat file.txt | tr -d '\n'
 
-🔹 Useful Ranges & Classes
+Useful Ranges & Classes
 
 a-z → lowercase letters
 
