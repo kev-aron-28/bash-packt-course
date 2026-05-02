@@ -31,5 +31,3 @@ done < file.txt
 while IFS=, read -r name age city; do
   echo "$name is $age and lives in $city"
 done < data.csv
-
-y
