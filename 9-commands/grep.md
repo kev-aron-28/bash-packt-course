@@ -40,10 +40,8 @@ grep -i "error" myfile.txt
 
 grep -n "TODO" code.c
 
-
 1. -i → Ignore case
 echo -e "Dog\ncat\nDOG\nmouse" | grep -i "dog"
-
 
 2. -v → Invert match (show lines that do NOT match)
 echo -e "apple\nbanana\norange" | grep -v "banana"
@@ -54,7 +52,6 @@ grep -r "main" ./project
 4. -n → Show line numbers
 echo -e "first line\nsecond line\nthird line" | grep -n "second"
 
-
 # Grep and regular expressions
 
 From the previous example, we now 
@@ -63,10 +60,7 @@ exclusively want to display lines starting with the string "root":
 cathy ~> grep ^root /etc/passwd
 root:x:0:0:root:/root:/bin/bash
 
-If we want to see which accounts have no shell assigned 
-whatsoever, we search for lines ending in ":":
-
-
+If we want to see which accounts have no shell assigned whatsoever, we search for lines ending in ":":
 cathy ~> grep :$ /etc/passwd
 news:x:9:13:news:/var/spool/news:
 
